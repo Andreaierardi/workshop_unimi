@@ -1,0 +1,8 @@
+{   
+    "random_state": 42,
+    "target_column": "Churn",
+    "index_column": "customerID",
+    "hyperparameters": {
+        "n_estimators": 1000
+    }
+}
