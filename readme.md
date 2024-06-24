@@ -39,6 +39,6 @@ password: airflow
 4.	Trigger the training_pipeline DAG to run the complete ML workflow.
 
 ### Task
-Implement the <code>train_model</code> and <code>evaluate_model</code> functions to define two new Airflow tasks. These tasks will be responsible for training and evaluating an additional machine learning model of your choice. Ensure that the new model’s training and evaluation processes are properly integrated into the existing Airflow DAG.
+Implement the <code>train_model</code> and <code>evaluate_model</code> functions in the script <code>train_model.py</code> to define two new Airflow tasks. These tasks will be responsible for training and evaluating an additional machine learning model of your choice. Ensure that the new model’s training and evaluation processes are properly integrated into the existing Airflow DAG.
 
 
