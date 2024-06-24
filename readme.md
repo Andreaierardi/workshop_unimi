@@ -23,6 +23,7 @@ Creation of a machine learning pipeline using Apache Airflow. We will go through
 1.	Start the Airflow web server and scheduler:
    
 ```sh
+docker compose up airflow-init
 docker-compose build
 docker-compose up
 ```
