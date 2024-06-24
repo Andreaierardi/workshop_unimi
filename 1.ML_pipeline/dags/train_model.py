@@ -40,12 +40,19 @@ def extract_data(**kwargs):
     CONFIG = load_config(config_path)
     # Simulating data extraction
     df = pd.read_csv('data/telco_data.csv', index_col=0)
-    df.to_csv('output/extracted_data.csv', index=False)
+    X = df.drop(columns=[CONFIG['index_column'], CONFIG['target_column']])
+    y = df[CONFIG['target_column']]
+    # Split the data into train and test sets
+    train_data, test_data = train_test_split(df, test_size=0.2, random_state=42)
 
+    # Optionally, save the train and test sets to new CSV files
+    train_data.to_csv('output/train_data.csv', index=False)
+    test_data.to_csv('output/test_data.csv', index=False)
+    print("Data has been split into train and test sets.")
 
 def preprocess_data(**kwargs):
     CONFIG = load_config(config_path)
-    df = pd.read_csv('output/extracted_data.csv')
+    df = pd.read_csv('output/train_data.csv')
     # Simulating data preprocessing
     df = df.dropna()
     
