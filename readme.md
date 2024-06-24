@@ -6,6 +6,7 @@
 
 ## Task 1: ML Engineering Workflow with Apache Airflow
 
+
 ### Overview
 Creation of a machine learning pipeline using Apache Airflow. We will go through the process of data extraction, preprocessing, model training, and evaluation using Python scripts and Airflow DAGs (Directed Acyclic Graphs).
 
@@ -16,6 +17,9 @@ Creation of a machine learning pipeline using Apache Airflow. We will go through
 5.	**TODO** Custom Model Training 
 6.	**TODO** Custom Model Evaluation 
 
+### Dataset
+[Telco Customer Churn
+](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 
 ### How to run 
 
@@ -40,6 +44,9 @@ password: airflow
 4.	Trigger the training_pipeline DAG to run the complete ML workflow.
 
 ### Task
-Implement the <code>train_model</code> and <code>evaluate_model</code> functions in the script <code>train_model.py</code> to define two new Airflow tasks. These tasks will be responsible for training and evaluating an additional machine learning model of your choice. Ensure that the new model’s training and evaluation processes are properly integrated into the existing Airflow DAG.
-
+- Implement the <code>train_model</code> and <code>evaluate_model</code> functions in the script <code>train_model.py</code> to define two new Airflow tasks. These tasks will be responsible for training and evaluating an additional machine learning model of your choice. Ensure that the new model’s training and evaluation processes are properly integrated into the existing Airflow DAG.
+- [OPTIONAL]  Create a new DAG named prediction_pipeline that performs the following steps:
+   - Loads the trained model.
+	- Executes predictions on test_data.csv.
+	- Computes and logs the model performance metrics.
 
