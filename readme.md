@@ -1,22 +1,34 @@
-### commands
-<code>
-python -m venv airflow_venv
-source airflow_venv/bin/activate
-</code>
+# Unimi Workshop
 
-
-pip install apache-airflow
-
-Initialize the Airflow database with
-<code>airflow db init. </code>
-
-Use airflow  to handle migrations.
-<code>db upgrade</code>
-
-<code> airflow users  create --role Admin --username admin --email admin --firstname admin --lastname admin --password admin
-</code>
+## Requirements
+- Docker
 
 
 
-docker-compose build  
-docker-compose up  
+## Tasks
+
+- ### Task 1:
+
+ 
+  <bold> Set Up Docker containers </bold>
+  
+  Set up the Airflow enrivonment:
+  ```bash
+  docker-compose build
+  docker-compose up
+  ```
+  
+  Wait till the server is running.
+  Copy&Paste the following URL into your browser to access airflow:
+  ```
+  http://localhost:8080/
+  ```
+  
+  Login:
+  ```
+  user: airflow
+  password: airflow
+  ```
+  
+  
+  Complete the function <code>train_model</code> and <code>evaluate_model</code> that create two Airflow Tasks to train and evaluate a new Machine Learning model.
