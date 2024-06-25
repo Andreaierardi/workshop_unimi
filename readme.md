@@ -1,7 +1,7 @@
 # Unimi Workshop
 
 ## Requirements
-- Docker
+- [Docker](https://docs.docker.com/compose/install/)
 
 
 ## Task 1: ML Engineering Workflow with Apache Airflow
